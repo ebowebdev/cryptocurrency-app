@@ -1,0 +1,17 @@
+.crypto-currency-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem
+}
+
+.input-search {
+  border: 1px solid red
+}

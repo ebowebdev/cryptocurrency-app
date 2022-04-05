@@ -1,0 +1,10 @@
+.crypto-news-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+}
+
+.best-crypto-news {
+  flex-basis: 70%;
+}

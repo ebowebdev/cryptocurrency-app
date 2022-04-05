@@ -1,0 +1,29 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 25%;
+  border: 1px solid red
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-img {
+  width: 25%;
+}
+
+.header-img img {
+  width: 100%;
+  background-size: cover;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  border: 1px solid
+}

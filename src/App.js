@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchDataAction } from './redux/actions'
+import Home from './pages/home/Home'
+import CryptoCurrency from './pages/cryptoCurrency/CryptoCurrency'
+import Crypto from './pages/crypto/Crypto'
+import News from './pages/news/News'
 
 function App() {
+  const list = useSelector(state => state.cryptos)
+  const dispatch = useDispatch()
+
+  useEffect(()=>{
+    dispatch(fetchDataAction())
+  },[dispatch])
+
+  console.log({list})
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route exact path="/home" element={<Home/>} />
+          <Route exact path="/cryptocurrency" element={<CryptoCurrency/>} />
+          <Route exact path="/cryptocurrency/news" element={<News/>} />
+          <Route exact path="/cryptocurrency/:uuid" element={<Crypto/>} />
+        </Routes> 
+      </BrowserRouter>
     </div>
   );
 }
