@@ -1,0 +1,9 @@
+.img-box {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.img {
+  width: 3rem;
+  background-size: cover;
+}

@@ -1,9 +1,15 @@
 .card-container {
+  flex-basis: 25%;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 25%;
-  border: 1px solid red
+  color: black;
+  padding: 1rem;
+  margin: 1rem;
+  border: 0.2rem solid #333;
+  border-radius: 1rem
 }
 
 .flex-space-between {

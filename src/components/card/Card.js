@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './card.css'
 
 const Card = ({ crypto }) => {
   const {
+    uuid,
     change, 
     name , 
     iconUrl, 
@@ -12,7 +14,7 @@ const Card = ({ crypto }) => {
     } = crypto
     
   return (
-    <div className="card-container">
+    <Link to={`/cryptocurrency/${uuid}`} className="card-container">
       <div className="card-header flex-space-between">
         <div className="header-name">{rank}-{name}</div>
         <div className="header-img">
@@ -27,7 +29,7 @@ const Card = ({ crypto }) => {
       <div className="card-footer">
         <button>See More</button>
       </div>
-    </div>
+    </Link>
   )
 }
 

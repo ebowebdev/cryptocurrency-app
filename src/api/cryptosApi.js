@@ -1,14 +1,14 @@
 import axios from 'axios'
 
-const URL = process.env.REACT_APP_URL
+const COINS_URL = process.env.REACT_APP_COINS_URL
 const HOST_CRYPTO_API = process.env.REACT_APP_HOST_CRYPTO_API
 const KEY_API = process.env.REACT_APP_KEY_API
 
-const fetchCryptos = async (limit=25) => {
+const fetchCryptos = async (limit) => {
   
   const options = {
     method: 'GET',
-    url: `${URL}?limit=${limit}`,
+    url: `${COINS_URL}?limit=${limit ? limit : 25}`,
     headers: {
       'X-RapidAPI-Host': HOST_CRYPTO_API,
       'X-RapidAPI-Key': KEY_API

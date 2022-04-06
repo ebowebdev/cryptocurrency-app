@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { fetchDataAction } from './redux/actions'
 import Home from './pages/home/Home'
 import CryptoCurrency from './pages/cryptoCurrency/CryptoCurrency'
@@ -8,14 +8,11 @@ import Crypto from './pages/crypto/Crypto'
 import News from './pages/news/News'
 
 function App() {
-  const list = useSelector(state => state.cryptos)
   const dispatch = useDispatch()
 
   useEffect(()=>{
     dispatch(fetchDataAction())
   },[dispatch])
-
-  console.log({list})
 
   return (
     <div>
