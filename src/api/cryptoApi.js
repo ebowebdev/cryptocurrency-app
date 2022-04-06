@@ -23,4 +23,4 @@ const fetchCrypto = async (id) => {
   }
 };
 
-export default fetchCrypto
+export { fetchCrypto }

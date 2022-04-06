@@ -9,7 +9,7 @@ const NewCryptos = ({stats}) => {
         <h3>The best New Cryptocurrencies</h3>
       </div>
       <div className="flex-box-row sb">
-        {stats?.newestCoins?.map(bestCoin => <CryptoBasicInfo bestCoin={bestCoin}/>)}
+        {stats?.newestCoins?.map(bestCoin => <CryptoBasicInfo bestCoin={bestCoin} key={bestCoin.uuid}/>)}
       </div>
     </div>
   )
