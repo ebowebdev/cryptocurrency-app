@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const COINS_URL = process.env.REACT_APP_COINS_URL
+const COINS_URL = process.env.REACT_APP_URL_COINS
 const HOST_CRYPTO_API = process.env.REACT_APP_HOST_CRYPTO_API
 const KEY_API = process.env.REACT_APP_KEY_API
 

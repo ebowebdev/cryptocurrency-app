@@ -5,7 +5,7 @@ const BestCryptos = ({stats}) => {
 
   return (
     <div>
-      <div>
+      <div className="text-center">
         <h3>The best Cryptocurrencies</h3>
       </div>
       <div className="flex-box-row sb">

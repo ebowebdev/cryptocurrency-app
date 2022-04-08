@@ -2,6 +2,23 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   border: 1px solid
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 60%;
+}
+
+.menu-list ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.menu {
+  display: none;
 }

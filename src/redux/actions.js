@@ -7,7 +7,31 @@ import {
   FETCH_CRYPTO_LOADING, 
   FETCH_CRYPTO_FAIL, 
   FETCH_CRYPTO,
+  FETCH_NEWS_SUCCESS, 
+  FETCH_NEWS_LOADING, 
+  FETCH_NEWS_FAIL, 
+  FETCH_NEWS
 } from './types'
+
+export const fetchNewsAction = (payload) => ({
+  type: FETCH_NEWS,
+  payload
+})
+
+export const fetchNewsSucces = (payload) => ({
+  type: FETCH_NEWS_SUCCESS,
+  payload
+})
+
+export const fetchNewsLoading = () => ({
+  type: FETCH_NEWS_LOADING
+})
+
+
+export const fetchNewsFail = (payload) => ({
+  type: FETCH_NEWS_FAIL,
+  payload
+})
 
 export const fetchDataAction = (payload) => ({
   type: FETCH_DATA,

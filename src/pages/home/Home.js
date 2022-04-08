@@ -4,18 +4,28 @@ import Navbar from '../../components/navbar/Navbar'
 import TotalMarket from '../../components/totalMarket/TotalMarket'
 import BestCryptos from '../../components/bestCryptos/BestCryptos'
 import NewCryptos from '../../components/newCryptos/NewCryptos'
+import News from '../../components/news/News'
 import './home.css'
 
 const Home = () => {
   const [stats, setStats] = useState([])
-  const [isLoading, setIsLoading] = useState([])
-  const data = useSelector((state) => state?.cryptos?.data);
-  console.log({data})
+  const [news, setNews] = useState({})
+  const [isLoading, setIsLoading] = useState(false)
+  const [newsLoading, setNewsLoading] = useState(false)
+  const cryptosData = useSelector((state) => state?.cryptos?.data);
+  const newsData = useSelector((state) => state?.news?.data);
+
+  console.log({news})
+  
+  useEffect(()=>{
+    setStats(cryptosData?.stats)
+    setIsLoading(cryptosData?.isLoading)
+  },[cryptosData])
 
   useEffect(()=>{
-    setStats(data?.stats)
-    setIsLoading(data?.isLoading)
-  },[data])
+    setNews(newsData?.value)
+    setNewsLoading(newsData?.isLoading)
+  },[newsData])
 
   return (
     <div>
@@ -25,9 +35,10 @@ const Home = () => {
       </div> : 
       <div>
         <Navbar/>
+        <TotalMarket stats={stats}/>
         <BestCryptos stats={stats}/>
         <NewCryptos stats={stats}/>
-        <TotalMarket stats={stats}/>
+        {newsLoading ? <h1>Loading ...</h1> : <News news={news}/>}
       </div> 
     }
     </div>

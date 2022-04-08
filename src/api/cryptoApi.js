@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const COIN_URL = process.env.REACT_APP_COIN_URL
+const COIN_URL = process.env.REACT_APP_URL_COIN
 const HOST_CRYPTO_API = process.env.REACT_APP_HOST_CRYPTO_API
 const KEY_API = process.env.REACT_APP_KEY_API
 

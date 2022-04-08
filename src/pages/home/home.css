@@ -4,7 +4,7 @@
 }
 
 .sb {
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .flex-box-column {
@@ -15,4 +15,8 @@
 .flex-center {
   justify-content: center;
   align-items: center;
+}
+
+.text-center {
+  text-align: center;
 }
