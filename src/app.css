@@ -4,19 +4,7 @@
   --third-color: #000000;
   --gris-color-two: #00C896;
   --white-color-light: #000000;
-  --border-color:  #474554;
-  --black-color: #ffffff;
-  --white-color: #000000;
-}
-.light1 {
-  --first-color: #ACA7CB;
-  --first-color: #fffeff;
-  --second-color: #474554;
-  --third-color: #000000;
-  --gris-color-two: #996C68;
-  --gris-color-two1: #D09F9B;
-  --white-color-light: #000000;
-  --border-color: #996C68;
+  --border-color:  #000000;
   --black-color: #ffffff;
   --white-color: #000000;
 }
