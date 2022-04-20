@@ -1,20 +1,71 @@
-.total-markt-container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.total-container {
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.total-markt-body {
+.total-markt-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
+  width: 200vw;
+  animation: scrollTotal 15s linear infinite alternate;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
 }
 
 .box {
-  background-color: #333;
-  color: white;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gris-color-two);
+  flex-basis: 20%;
+  color: var(--white-color);
+  padding: 0.2rem 1rem;
+  margin: 0 0.1rem
+}
+
+@media screen and (max-width: 1164px) {
+  .total-markt-container {
+    width: 250vw;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .total-markt-container {
+    width: 300vw;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  .total-markt-container {
+    width: 350vw;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .total-markt-container {
+    width: 500vw;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .total-markt-container {
+    width: 600vw;
+  }
+  .box {
+    font-size: 0.8rem
+  }
+  .box-title {
+    padding-right: 1rem
+  }
+}
+
+@keyframes scrollTotal {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-52%);
+  }
 }

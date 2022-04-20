@@ -1,0 +1,23 @@
+.html-box {
+  margin: 1rem 0;
+}
+
+.html-box h1 {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.html-box h3 {
+  border-left: 0.5rem solid var(--second-color);
+  padding-top: 1rem;
+  padding-left: 1rem;
+  color: var(--second-color);
+}
+
+.html-box p {
+  font-size: 1.2rem;
+  border-bottom: 0.2rem solid #ccc;
+  border-left: 0.5rem solid var(--second-color);
+  padding: 1rem;
+  margin: 1rem 0;
+}

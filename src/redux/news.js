@@ -1,5 +1,5 @@
 const initialState = {
-  isLoading: false,
+  newsLoading: false,
   error: ''
 }
 
@@ -9,12 +9,12 @@ const newsReducer = (state = initialState, action) => {
       return {
         ...state,
         data : action.payload,
-        isLoading: false
+        newsLoading: false
       }
     case 'FETCH_NEWS_LOADING':
       return {
         ...state,
-        isLoading: true
+        newsLoading: true
       }
     case 'FETCH_NEWS_FAIL':
       return {

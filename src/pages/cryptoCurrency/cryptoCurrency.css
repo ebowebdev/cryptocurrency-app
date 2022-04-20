@@ -1,19 +1,91 @@
-
+.crypto-currency-container {
+  display: flex;
+  flex-direction: column;
+}
 
 .crypto-currency-list {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .search-box {
-  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 1rem
+  padding: 1rem;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+}
+
+.search-box > button {
+  flex-grow: 1;
+  border: 0.2rem solid var(--border-color);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin: 0.1rem;
+  background-color: var(--first-color);
+  outline: none;
+  color: var(--white-color);
+  position: relative;
+}
+
+.search-box > button:hover {
+  background-color: var(--second-color);
+  color: var(--black-color)
+}
+
+.button-box {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.btn-page {
+  width: 30%;
+  border-style: none;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--second-color);
+  color: var(--black-color);
+  border-radius: 0.2rem;
+  cursor: pointer;
 }
 
 .input-search {
-  border: 1px solid red
+  border: 0.2rem solid var(--border-color);
+  border-radius: 0.3rem;
+  width: 100%;
+  padding: 1rem;
+  margin: 0.1rem;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  outline: none;
+}
+
+.active {
+  background-color: var(--second-color) !important;
+  color: var(--black-color) !important;
+}
+
+@media screen and (max-width: 767px) and (min-width: 525px){
+  .search-box {
+    padding: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 525px){
+  .crypto-currency-list {
+    margin-top: 1rem;
+  }
+  .input-search {
+    width: 100%;
+  }
+  .search-box {
+    padding: 0;
+  }
+  .btn-page {
+    width: auto;
+  }
 }

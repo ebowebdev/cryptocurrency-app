@@ -3,7 +3,7 @@ import './cryptoBasecInfo.css'
 
 const CryptoBasicInfo = ({bestCoin}) => {
   return (
-    <div className="flex-box-column">
+    <div className="flex-box-column best-coin-container">
       <div className="img-box" >
         <img className="img" src={bestCoin?.iconUrl} alt="coin info" />
       </div>

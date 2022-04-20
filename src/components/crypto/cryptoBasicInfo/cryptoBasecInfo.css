@@ -1,0 +1,17 @@
+.best-coin-container {
+  align-content: center;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10%;
+  font-size: 0.8rem;
+  font-weight: 600
+}
+
+.img-box {
+  flex-grow: 1;
+}
+
+.img {
+  width: 3rem;
+  background-size: cover;
+}

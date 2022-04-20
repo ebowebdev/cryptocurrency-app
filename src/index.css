@@ -1,11 +1,17 @@
+:root {
+  --first-color: #010101;
+  --second-color: #00C6CF;
+  --third-color: #fffcf6;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --white-color-light: #ffffffd9;
+  --border-color: #333333;
+  --gris-color-two: #151515;
+  --font-family-title: 'Shadows Into Light', cursive;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.app {
-  width: 100%;
-  padding: 1rem;
-  background-color: #eddede;
 }

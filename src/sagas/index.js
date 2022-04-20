@@ -1,19 +1,28 @@
-import { takeEvery, all } from 'redux-saga/effects'
-import { FETCH_DATA, FETCH_CRYPTO, FETCH_NEWS } from '../redux/types'
-import { fetchData, fetchCryptoData, fetchNews } from './dataFetching'
+import { takeLatest,all } from 'redux-saga/effects'
+import { FETCH_DATA, FETCH_CRYPTO, FETCH_NEWS, FETCH_CRYPTO_HISTORY } from '../redux/types'
+import { fetchData, fetchCryptoData, fetchNews, fetchCryptoHistoryData } from './dataFetching'
 
 function* sagaCryptosWatcher(){
-  yield takeEvery(FETCH_DATA, fetchData)
+  yield takeLatest(FETCH_DATA, fetchData)
 }
 
 function* sagaCryptoWatcher(){
-  yield takeEvery(FETCH_CRYPTO, fetchCryptoData)
+  yield takeLatest(FETCH_CRYPTO, fetchCryptoData)
+}
+
+function* sagaCryptoHistoryWatcher(){
+  yield takeLatest(FETCH_CRYPTO_HISTORY, fetchCryptoHistoryData)
 }
 
 function* sagaNewsWatcher(){
-  yield takeEvery(FETCH_NEWS, fetchNews)
+  yield takeLatest(FETCH_NEWS, fetchNews)
 }
 
 export default  function* rootSaga(){
-  yield all([sagaCryptosWatcher(),sagaCryptoWatcher(),sagaNewsWatcher()])
+  yield all([
+    sagaCryptosWatcher(),
+    sagaCryptoWatcher(),
+    sagaNewsWatcher(),
+    sagaCryptoHistoryWatcher()
+  ])
 }

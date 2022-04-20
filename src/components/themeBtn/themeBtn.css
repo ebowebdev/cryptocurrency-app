@@ -1,0 +1,18 @@
+.themeBtn {
+  background-color: var(--gris-color-two);
+  margin-left: 0.2rem;
+  padding: 0 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 2%;
+}
+
+.themeBtn button {
+  background-color: inherit;
+  outline: none;
+  border: none;
+  color: var(--second-color);
+  margin: auto;
+  cursor: pointer;
+}

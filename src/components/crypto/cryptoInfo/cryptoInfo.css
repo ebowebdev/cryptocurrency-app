@@ -1,0 +1,37 @@
+.crypto-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-basis: 48%;
+  font-size: 0.8rem;
+  padding: 0.5rem 2rem;
+  border-bottom: 0.5rem solid var(--second-color);
+}
+
+.crypto-info-box {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem
+}
+
+.crypto-info-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--second-color);
+  font-size: 1.2rem;
+  padding-right: 0.5rem
+}
+
+.crypto-info-value {
+  flex-grow: 1;
+  text-align: end;
+}
+
+@media screen and (max-width: 600px){
+  .crypto-info {
+    width: 100%;
+    flex-basis: 100%;
+    padding: 0rem;
+  }
+}

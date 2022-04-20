@@ -6,6 +6,10 @@ import {
   FETCH_CRYPTO_SUCCESS, 
   FETCH_CRYPTO_LOADING, 
   FETCH_CRYPTO_FAIL, 
+  FETCH_CRYPTO_HISTORY,
+  FETCH_CRYPTO_HISTORY_SUCCESS, 
+  FETCH_CRYPTO_HISTORY_LOADING, 
+  FETCH_CRYPTO_HISTORY_FAIL, 
   FETCH_CRYPTO,
   FETCH_NEWS_SUCCESS, 
   FETCH_NEWS_LOADING, 
@@ -72,3 +76,25 @@ export const fetchCyptoFail = (payload) => ({
   type: FETCH_CRYPTO_FAIL,
   payload
 })
+
+export const fetchCryptoHistory = (payload) => ({
+  type: FETCH_CRYPTO_HISTORY,
+  payload
+})
+
+export const fetchCryptoHistorySucces = (payload) => ({
+  type: FETCH_CRYPTO_HISTORY_SUCCESS,
+  payload
+})
+
+export const fetchCryptoHistoryLoading = () => ({
+  type: FETCH_CRYPTO_HISTORY_LOADING
+})
+
+
+export const fetchCyptoHistoryFail = (payload) => ({
+  type: FETCH_CRYPTO_HISTORY_FAIL,
+  payload
+})
+
+

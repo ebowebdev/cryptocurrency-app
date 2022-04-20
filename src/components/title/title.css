@@ -1,0 +1,29 @@
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  font-size: 1.5rem
+}
+
+.title-container > h1 {
+  text-transform: capitalize;
+  text-align: center;
+  position: relative;
+  padding: 0 1rem;
+  z-index: 0;
+}
+
+.title-container > h1::before {
+  content: '';
+  position: absolute;
+  inset:0;
+  top: 60%;
+  z-index: -1;
+  background-color: var(--gris-color-two);
+}
+
+@media screen and (max-width: 480px){
+  .title-container > h1 {
+    font-size: 1.17rem
+  }
+}

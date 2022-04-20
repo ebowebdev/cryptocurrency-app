@@ -1,8 +1,35 @@
+.news-comp {
+  margin: 1rem 0
+}
+
 .news-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 1rem;
-  border: 1px solid red
+  padding: 1rem 0;
+}
+
+.news-title {
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem 0;
+  text-transform: capitalize;
+}
+
+.crypto-info-soutitle {
+  display: flex;
+  justify-content: center;
+}
+
+.crypto-info-soutitle span{
+  color: var(--second-color);
+  font-size: 3rem;
+  padding: 0.5rem
+}
+
+.title-desc {
+  text-align: center;
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
 }

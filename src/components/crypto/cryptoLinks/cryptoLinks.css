@@ -1,0 +1,25 @@
+.crypto-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.crypto-link-box {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.crypto-link-btn {
+  border: none;
+  padding: 0.3rem;
+  background-color: var(--second-color);
+  color: var(--black-color);
+  font-weight: 600;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
