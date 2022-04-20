@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import moment from "moment";
 import "./newsCard.css";
 
@@ -48,4 +48,4 @@ const NewsCard = ({ info, index }) => {
   );
 };
 
-export default NewsCard;
+export default memo(NewsCard);

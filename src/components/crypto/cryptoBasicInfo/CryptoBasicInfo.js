@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import './cryptoBasecInfo.css'
 
 const CryptoBasicInfo = ({bestCoin}) => {
@@ -15,4 +15,4 @@ const CryptoBasicInfo = ({bestCoin}) => {
   )
 }
 
-export default CryptoBasicInfo
+export default memo(CryptoBasicInfo)

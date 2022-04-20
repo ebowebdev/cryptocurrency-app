@@ -17,8 +17,6 @@ function App() {
   const dispatch = useDispatch();
   const [state, dispatchTheme] = useReducer(themeReducer,initialstate)
 
-  console.log({staApp:state})
-
   const changeTheme = () => {
     dispatchTheme({
       type: 'CHANGE_THEME'

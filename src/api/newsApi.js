@@ -18,7 +18,6 @@ const fetchSearchNews = async (category = "cryptocurrency") => {
     };
 
     const res = await axios.request(options);
-    console.log({ res: res.data });
     return res.data;
   } catch (error) {
     return error.message;

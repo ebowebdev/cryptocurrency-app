@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import './headerImg.css'
 
 const HeaderImg = ({ darke }) => {
@@ -16,4 +16,4 @@ const HeaderImg = ({ darke }) => {
   )
 }
 
-export default HeaderImg
+export default memo(HeaderImg)

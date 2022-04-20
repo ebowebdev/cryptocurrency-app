@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import BestCryptos from '../cryptos/bestCryptos/BestCryptos'
 import "./header.css";
 
@@ -17,4 +17,4 @@ const Header = ({ stats }) => {
   );
 };
 
-export default Header;
+export default memo(Header);

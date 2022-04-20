@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import { useSelector } from "react-redux";
 import millify from "millify";
 import "./totalMarket.css";
@@ -74,4 +74,4 @@ const TotalMarket = () => {
   );
 };
 
-export default TotalMarket;
+export default memo(TotalMarket);

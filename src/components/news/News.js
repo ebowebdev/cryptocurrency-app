@@ -5,7 +5,6 @@ import Title from '../title/Title'
 import './news.css' 
 
 const News = ({news}) => {
-  console.log({news})
   return (
     <div className="news-comp">
       <div className="crypto-info-soutitle">

@@ -1,14 +1,15 @@
-import React from "react";
+import React, {memo} from "react";
 import Title from "../../title/Title";
 import './cryptoLinks.css'
 
 const CryptoLinks = ({name,links}) => {
+  console.log({links})
   return (
     <div className="crypto-links">
       <Title title={`Community of ${name}`}/>
       {links &&
         links.map((link) => (
-          <div className="crypto-link-box">
+          <div className="crypto-link-box" key={link.url}>
             <div className="crypto-link-name">{link.name}</div>
             <button className="crypto-link-btn">
               <a href={link.link} target="_blank" rel="noreferrer">
@@ -21,4 +22,4 @@ const CryptoLinks = ({name,links}) => {
   );
 };
 
-export default CryptoLinks;
+export default memo(CryptoLinks);

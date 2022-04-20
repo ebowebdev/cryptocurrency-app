@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import moment from "moment";
 import { fetchCryptoHistory } from "../../redux/actions";
 import CryptoDesc from "../crypto/cryptoDesc/CryptoDesc";
 import CryptoLinks from "../crypto/cryptoLinks/CryptoLinks"
@@ -93,4 +92,4 @@ const Chart = () => {
   );
 };
 
-export default Chart;
+export default memo(Chart);

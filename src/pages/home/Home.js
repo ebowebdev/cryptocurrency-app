@@ -14,8 +14,6 @@ const Home = ({ darke }) => {
   const newsData = useSelector((state) => state?.news?.data);
   const { newsLoading } = useSelector((state) => state?.news);
 
-  console.log({darke})
-
   useEffect(() => {
     setStats(cryptosData?.stats);
   }, [cryptosData]);
@@ -30,7 +28,7 @@ const Home = ({ darke }) => {
         <div>
           <HeaderImg darke={darke}/>
           {stats && <Header stats={stats} />}
-          {(!newsLoading && newsData) ? (
+          {!newsLoading && newsData ? (
             <News news={news} />
           ) : (
             <Loading/>

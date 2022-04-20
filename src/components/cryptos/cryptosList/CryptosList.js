@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, memo} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { fetchDataAction } from '../../../redux/actions'
@@ -32,7 +32,11 @@ const CryptosList = () => {
       </div>
       <div className="cryptos-list-container">
         {cryptos?.map(crypto => 
-        <div onClick={()=>navigate(`cryptocurrencies/${crypto?.uuid}`)} className="cryptos-list-box">
+        <div 
+        onClick={()=>navigate(`cryptocurrencies/${crypto?.uuid}`)} 
+        className="cryptos-list-box"
+        key={crypto.uuid}
+        >
           <img src={crypto?.iconUrl} alt="crypto"  className="cryptos-list-img"/>
           <p className="cryptos-list-name">{crypto?.name}</p>
         </div>)}
@@ -44,4 +48,4 @@ const CryptosList = () => {
   )
 }
 
-export default CryptosList
+export default memo(CryptosList)

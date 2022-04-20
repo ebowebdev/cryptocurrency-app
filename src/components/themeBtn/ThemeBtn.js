@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import { BsSunFill } from 'react-icons/bs'
 import { BsFillMoonFill } from 'react-icons/bs'
 import './themeBtn.css'
@@ -14,4 +14,4 @@ const themeBtn = ({changeTheme, darke}) => {
   )
 }
 
-export default themeBtn
+export default memo(themeBtn)

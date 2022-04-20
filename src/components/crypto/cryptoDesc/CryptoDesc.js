@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import htmlReactParser from "html-react-parser"
 import Title from "../../title/Title"
 import './cryptoDesc.css'
@@ -13,4 +13,4 @@ const CryptoDesc = ({name, description}) => {
   )
 }
 
-export default CryptoDesc
+export default memo(CryptoDesc)

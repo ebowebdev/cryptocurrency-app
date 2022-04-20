@@ -19,7 +19,6 @@ const fetchCryptoHistory = async ({uuid, time}) => {
 
   try {
     const res = await axios.request(options)
-    console.log({data:res.data})
     return res.data
   }catch(err){
     return err.message

@@ -15,7 +15,7 @@ const NewsPage = () => {
   
   return (
     <div>
-      {(!newsLoading && news) ? <News news={news}/> : <Loading/>}
+      {!newsLoading && news ? <News news={news}/> : <Loading/>}
     </div>
   )
 }
