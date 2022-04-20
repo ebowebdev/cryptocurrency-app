@@ -10,7 +10,7 @@ const HeaderImg = ({ darke }) => {
         </div>
       </div>
       <div className="header-img">
-        <img src={darke ? "bitcoin1.jpg" : "images.jpg"} alt="cryptos" />
+        <img src={darke ? "bitcoin.jpg" : "images.jpg"} alt="cryptos" />
       </div>
     </div>
   )
