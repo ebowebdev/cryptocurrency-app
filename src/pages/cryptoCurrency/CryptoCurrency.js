@@ -54,9 +54,9 @@ const CryptoCurrency = () => {
     setCryptosFilted(cryptos);
   }, [cryptos]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     inputRef.current.focus();
-  }, []);
+  }, []);*/
 
   const fetchMoreCryptos = () => {
     if (limit < 100) {
@@ -77,7 +77,7 @@ const CryptoCurrency = () => {
           type="text"
           className="input-search"
           placeholder="search your cryptocurrency"
-          onChange={() => filterCryptosByInput(cryptos, setCryptosFilted)}
+          onChange={(e) => filterCryptosByInput(e,cryptos, setCryptosFilted)}
         />
         <button
           className={btn === "A-Z" ? "active" : undefined}
