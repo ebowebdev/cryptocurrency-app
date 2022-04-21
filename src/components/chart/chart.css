@@ -22,9 +22,18 @@
   width: 10%;
 }
 
+@media screen and (max-width: 600px){
+  .chart-line {
+    width: 100%;
+  }
+  .chart-box {
+    height: 100%;
+  }
+}
+
+
 @media screen and (max-width: 480px){
   .chart-container {
     padding: 0rem
   }
-  
 }

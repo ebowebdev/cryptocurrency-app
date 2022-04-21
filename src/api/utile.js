@@ -1,5 +1,5 @@
 export const filterCryptosByInput = (e, cryptos, setCryptosFilted) => {
-  const newCryptos = [...cryptos?.filter(crypto => crypto?.name.toLowerCase().includes(e.target.value) && crypto )]
+  const newCryptos = [...cryptos?.filter(crypto => crypto?.name.toLowerCase().includes((e.target.value).toLowerCase()) && crypto )]
   setCryptosFilted(newCryptos)
 }
 

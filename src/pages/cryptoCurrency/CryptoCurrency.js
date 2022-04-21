@@ -54,9 +54,11 @@ const CryptoCurrency = () => {
     setCryptosFilted(cryptos);
   }, [cryptos]);
 
-  /*useEffect(() => {
-    inputRef.current.focus();
-  }, []);*/
+  useEffect(() => {
+    if(window.innerWidth > 600){
+      inputRef.current.focus()
+    }
+  }, [])
 
   const fetchMoreCryptos = () => {
     if (limit < 100) {

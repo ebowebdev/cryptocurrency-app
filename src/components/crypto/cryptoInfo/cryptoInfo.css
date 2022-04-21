@@ -33,5 +33,6 @@
     width: 100%;
     flex-basis: 100%;
     padding: 0rem;
+    padding-bottom: 1rem;
   }
 }
